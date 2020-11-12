@@ -1,11 +1,13 @@
 # apps20kmet-hw1
 
-###Task description:
+Task description:
+=================
 Implementation of methods for the TemperatureSeriesAnalysis class to work with a number of temperature values.
 Create tests in TemperatureSeriesAnalysisTest.java to verify that the methods are correct.
 
 
-###Methods' description:
+Methods' description:
+=====================
 1. ***double average()***
 Calculates the average temperature. If the row is empty, generates an IllegalArgumentException.
 
