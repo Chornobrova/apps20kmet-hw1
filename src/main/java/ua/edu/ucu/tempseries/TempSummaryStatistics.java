@@ -4,15 +4,15 @@ import lombok.Getter;
 
 public class TempSummaryStatistics {
     @Getter
-    final private double avgTemp;
+    private final double avgTemp;
     @Getter
-    final private double devTemp;
+    private final double devTemp;
     @Getter
-    final private double minTemp;
+    private final double minTemp;
     @Getter
-    final private double maxTemp;
+    private final double maxTemp;
 
-    public TempSummaryStatistics(TemperatureSeriesAnalysis temps){
+    public TempSummaryStatistics(TemperatureSeriesAnalysis temps) {
         avgTemp = temps.average();
         devTemp = temps.deviation();
         minTemp = temps.min();
