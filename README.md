@@ -1,5 +1,3 @@
-# apps20kmet-hw1
-
 Task description:
 =================
 Implementation of methods for the **TemperatureSeriesAnalysis** class to work with a number of temperature values.
