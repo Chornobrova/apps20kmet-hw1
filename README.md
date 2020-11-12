@@ -1,7 +1,7 @@
 Task description:
 =================
-Implementation of methods for the **TemperatureSeriesAnalysis** class to work with a number of temperature values.
-Create tests in **TemperatureSeriesAnalysisTest.java** to verify that the methods are correct.
+Implementation of methods for the [**TemperatureSeriesAnalysis**](https://github.com/Chornobrova/apps20kmet-hw1/blob/master/src/main/java/ua/edu/ucu/tempseries/TempSummaryStatistics.java) class to work with a number of temperature values.
+Create tests in [**TemperatureSeriesAnalysisTest.java**](https://github.com/Chornobrova/apps20kmet-hw1/blob/master/src/main/java/ua/edu/ucu/tempseries/TemperatureSeriesAnalysisTest.java) to verify that the methods are correct.
 
 
 Methods' description:
