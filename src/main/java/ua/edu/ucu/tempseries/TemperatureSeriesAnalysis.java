@@ -118,25 +118,25 @@ public class TemperatureSeriesAnalysis {
         return new TempSummaryStatistics(this);
     }
 
-    public int addTemps(double... temps)
+    public int addTemps(double... toAdd)
             throws InputMismatchException {
-        for (double temp: temps) {
+        for (double temp: toAdd) {
             if (temp < ABSOLUTE_ZERO) {
                 throw new InputMismatchException();
             }
         }
-        for (double temp: temps) {
-            if (size == this.temps.length) {
+        for (double temp: toAdd) {
+            if (size == temps.length) {
                 double[] newTemps = new double[2 * size];
                 System.arraycopy(
-                        this.temps,
+                        temps,
                         0,
                         newTemps,
                         0,
                         size);
-                this.temps = newTemps;
+                temps = newTemps;
             }
-            this.temps[size] = temp;
+            temps[size] = temp;
             size += 1;
         }
         return 0;
