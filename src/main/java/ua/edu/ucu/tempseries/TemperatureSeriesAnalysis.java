@@ -103,7 +103,7 @@ public class TemperatureSeriesAnalysis {
         double[] greater = new double[size];
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (temps[i] > tempValue) {
+            if (temps[i] >= tempValue) {
                 greater[count] = temps[i];
                 count += 1;
             }
