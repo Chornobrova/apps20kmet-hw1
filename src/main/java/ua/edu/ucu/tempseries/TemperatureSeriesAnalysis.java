@@ -36,7 +36,7 @@ public class TemperatureSeriesAnalysis {
         for (int i = 0; i < size; i++) {
             squaresSum += temps[i] * temps[i];
         }
-        return squaresSum/size - avgSquared;
+        return Math.sqrt(squaresSum/size - avgSquared);
     }
 
     public double min() throws IllegalArgumentException {
@@ -125,20 +125,21 @@ public class TemperatureSeriesAnalysis {
                 throw new InputMismatchException();
             }
         }
+        int finalSize = toAdd.length + size;
+        int arraySize = temps.length;
+        while (arraySize < finalSize){
+            arraySize *= 2;
+        }
+        if (arraySize > temps.length){
+            double[] newTemps = new double[arraySize];
+            System.arraycopy(temps, 0, newTemps, 0, size);
+            temps = newTemps;
+        }
         for (double temp: toAdd) {
-            if (size == temps.length) {
-                double[] newTemps = new double[2 * size];
-                System.arraycopy(
-                        temps,
-                        0,
-                        newTemps,
-                        0,
-                        size);
-                temps = newTemps;
-            }
             temps[size] = temp;
             size += 1;
         }
-        return 0;
+        return size;
     }
+
 }
