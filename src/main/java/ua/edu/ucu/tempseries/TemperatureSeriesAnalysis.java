@@ -127,10 +127,10 @@ public class TemperatureSeriesAnalysis {
         }
         int finalSize = toAdd.length + size;
         int arraySize = temps.length;
-        while (arraySize < finalSize){
+        while (arraySize < finalSize) {
             arraySize *= 2;
         }
-        if (arraySize > temps.length){
+        if (arraySize > temps.length) {
             double[] newTemps = new double[arraySize];
             System.arraycopy(temps, 0, newTemps, 0, size);
             temps = newTemps;
